@@ -125,9 +125,36 @@
 
 
 //pada es6 dipermudah menjadi
-signIn = (username, password) =>{
-    console.log(username + " Passwordnya: " + password)
-} 
+// signIn = (username, password) =>{
+//     console.log(username + " Passwordnya: " + password)
+// } 
 
-let data = ['Khoirul', 'Laylay']
-signIn(...data)
+// let data = ['Khoirul', 'Laylay']
+// signIn(...data)
+
+// 6 Template Literal
+// let username = 'khoirul'
+// let umur = 20
+
+// let text = "Member " + username + " umurnya " + umur
+
+// console.log(text)
+
+//dengan es6 kita ubah semuanya menjadi array
+// let username = 'khoirul'
+// let umur = 20
+
+// let text = `Member ${username} umurnya ${umur}`
+
+// console.log(text)
+
+// keluaran beberapa baris
+let username = 'khoirul'
+let umur = 20
+
+let div = `
+    ${username}
+    ${umur}
+`
+
+console.log(div)
