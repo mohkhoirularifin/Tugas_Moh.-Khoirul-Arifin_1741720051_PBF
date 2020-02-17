@@ -149,12 +149,72 @@
 // console.log(text)
 
 // keluaran beberapa baris
-let username = 'khoirul'
-let umur = 20
+// let username = 'khoirul'
+// let umur = 20
 
-let div = `
-    ${username}
-    ${umur}
-`
+// let div = `
+//     ${username}
+//     ${umur}
+// `
 
-console.log(div)
+// console.log(div)
+
+//7 Shorthand dan Destructuring Object
+//// a Shorthand
+// name = 'Khoirul'
+// umur = 20
+
+// let member = {
+//     name : name,
+//     umur : umur
+// }
+
+// console.log(member)
+
+// setelah disingkat
+// name = 'Khoirul'
+// umur = 20
+
+// let member = {
+//     name,umur
+// }
+
+// console.log(member)
+
+// menggunakan fungsi
+// name = 'Khoirul'
+// umur = 20
+// getData = () => {
+//     return `member ${name} umurnya ${umur}`
+// }
+
+// let member = {
+//     name,umur,getData
+// }
+
+// console.log(member.getData())
+
+//// b Destructuring Object
+// let member = {
+//     name : 'Khoirul',
+//     umur : 20
+// }
+
+// let {umur, name} = member
+
+// console.log(name)
+
+// untuk mengubah nama
+// let member = {
+//     name : 'Khoirul',
+//     umur : 20
+// }
+
+// let {umur : age, name} = member
+
+// console.log(age)
+
+// untuk array
+let angka = [2, 3, 5]
+let [a, b, c] = angka
+console.log(a + b * c)
