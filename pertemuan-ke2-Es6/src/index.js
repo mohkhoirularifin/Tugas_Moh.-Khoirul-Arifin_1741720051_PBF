@@ -215,6 +215,56 @@
 // console.log(age)
 
 // untuk array
-let angka = [2, 3, 5]
-let [a, b, c] = angka
-console.log(a + b * c)
+// let angka = [2, 3, 5]
+// let [a, b, c] = angka
+// console.log(a + b * c)
+
+// 8 Class
+//// class biasa
+// class Members {
+//     constructor(name) { //Menggunakan constructor
+//         this.name = name
+//     }
+// }
+
+// let member = new Members('Khoirul')
+// console.log(member)
+
+//tidak menggunakan constructor
+// class Members {
+//     getMember(name) {
+//         return 'namanya ' + name
+//     }
+// }
+
+
+// let member = new Members()
+// console.log(member.getMember('Khoirul'))
+
+// menggunakan constructor dan fungsi
+// class Members {
+//     constructor(name, umur) { //Menggunakan constructor
+//         this.name = name
+//         this.umur = umur
+//     }
+//     getData(name) { // menggunakan fungsi
+//         return `namanya ${this.name} umurnya ${this.umur}`
+//     }
+// }
+
+
+// let member = new Members('Khoirul', '20')
+// console.log(member.getData())
+
+// fungsi static
+class Members {
+    constructor(name, umur) { //Menggunakan constructor
+        this.name = name
+        this.umur = umur
+    }
+
+    static getUmur() {
+        return 'Umurnya 20'
+    }
+}
+console.log(Members.getUmur())
