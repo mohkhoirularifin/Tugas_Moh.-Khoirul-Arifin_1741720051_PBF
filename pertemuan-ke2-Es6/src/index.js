@@ -270,5 +270,21 @@
 // console.log(Members.getUmur())
 
 // 9 Webpack
-const test = 'Khoirul'
-console.log(test)
+// const test = 'Khoirul'
+// console.log(test)
+
+// 10 Import Eksport 
+// import {user} from './app/member'
+
+// console.log(user)
+
+// 2 variabel
+// import {user, forum} from './app/member'
+
+// console.log(user)
+// console.log(forum)
+
+// import semua file
+import * as app from './app'
+
+console.log(app.user, app.forum)
