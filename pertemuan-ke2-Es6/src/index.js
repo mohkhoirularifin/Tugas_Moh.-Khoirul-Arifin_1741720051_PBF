@@ -257,14 +257,18 @@
 // console.log(member.getData())
 
 // fungsi static
-class Members {
-    constructor(name, umur) { //Menggunakan constructor
-        this.name = name
-        this.umur = umur
-    }
+// class Members {
+//     constructor(name, umur) { //Menggunakan constructor
+//         this.name = name
+//         this.umur = umur
+//     }
 
-    static getUmur() {
-        return 'Umurnya 20'
-    }
-}
-console.log(Members.getUmur())
+//     static getUmur() {
+//         return 'Umurnya 20'
+//     }
+// }
+// console.log(Members.getUmur())
+
+// 9 Webpack
+const test = 'Khoirul'
+console.log(test)
