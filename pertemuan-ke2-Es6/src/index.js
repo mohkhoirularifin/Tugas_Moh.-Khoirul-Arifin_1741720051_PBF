@@ -285,6 +285,11 @@
 // console.log(forum)
 
 // import semua file
-import * as app from './app'
+// import * as app from './app'
 
-console.log(app.user, app.forum)
+// console.log(app.user, app.forum)
+
+// 11 Export Default
+import forum from './app/forum'
+
+console.log(forum)

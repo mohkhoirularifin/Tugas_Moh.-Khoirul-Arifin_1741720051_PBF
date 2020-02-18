@@ -3,4 +3,7 @@
 // }
 
 // Eksport Default
+export default {
+    umur : 25
+}
 
