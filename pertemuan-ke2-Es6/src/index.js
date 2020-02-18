@@ -290,6 +290,96 @@
 // console.log(app.user, app.forum)
 
 // 11 Export Default
-import forum from './app/forum'
+// import forum from './app/forum'
 
-console.log(forum)
+// console.log(forum)
+
+// 12 Promise
+// let getMember = new Promise ((resolve, reject) => {
+//     if (true) {
+//         resolve('Berhasil!')
+//     }
+//     reject('Gagal!')
+// })
+
+// console.log(getMember)
+
+// kondisi false
+// let getMember = new Promise ((resolve, reject) => {
+//     if (false) {
+//         resolve('Berhasil!')
+//     }
+//     reject('Gagal!')
+// })
+
+// console.log(getMember)
+
+// penyelesaian error
+// let getMember = new Promise ((resolve, reject) => {
+//     if (false) {
+//         resolve('Berhasil!')
+//     }
+//     reject('Gagal!')
+// }).then((msg) => {
+//     console.log('Ini adalah then ' + msg)
+// }).catch((msg) => {
+//     console.log('Ini adalah catch ' + msg)
+// })
+
+// console.log(getMember)
+
+// true
+// let getMember = new Promise ((resolve, reject) => {
+//     if (true) {
+//         resolve('Berhasil!')
+//     }
+//     reject('Gagal!')
+// }).then((msg) => {
+//     console.log('Ini adalah then ' + msg)
+// }).catch((msg) => {
+//     console.log('Ini adalah catch ' + msg)
+// })
+
+// console.log(getMember)
+
+// promise pada console
+// let getMember = new Promise ((resolve, reject) => {
+//     if (false) {
+//         resolve('Berhasil!')
+//     }
+//     reject('Gagal!')
+// })
+
+// console.log(getMember.then((msg) => {
+//     console.log('Ini adalah then ' + msg)
+// }).catch((msg) => {
+//     console.log('Ini adalah catch ' + msg)
+// }))
+
+// Kondisi true
+// let getMember = new Promise ((resolve, reject) => {
+//     if (true) {
+//         resolve('Berhasil!')
+//     }
+//     reject('Gagal!')
+// })
+
+// console.log(getMember.then((msg) => {
+//     console.log('Ini adalah then ' + msg)
+// }).catch((msg) => {
+//     console.log('Ini adalah catch ' + msg)
+// }))
+
+// Mempersingkat catch
+let getMember = new Promise ((resolve, reject) => {
+    if (true) {
+        resolve('Berhasil!')
+    }
+    reject('Gagal!')
+})
+
+console.log(getMember.then((msg) => {
+    console.log('Ini adalah then ' + msg)
+}, (msg) => {
+    console.log('Ini adalah catch ' + msg)
+}))
