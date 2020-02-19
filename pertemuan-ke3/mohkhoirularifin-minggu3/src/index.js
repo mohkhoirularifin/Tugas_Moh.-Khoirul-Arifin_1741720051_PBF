@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import logo from './IMG_6282bw.jpg';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
@@ -38,7 +39,29 @@ const Navbar = () => {
   </nav>
 }
 
+const Body = () => {
+    return(
+        // <div class = "container">
+        //     <div class = "text" >
+        //         <center><h1>BIODATA</h1></center>
+        //     </div>
+        // </div>
+        <div class = "row">
+            <div class = "col-5">
+                <img src={logo} className="App-logo" alt="logo" />
+            </div>
+            <div class = "col-1">
+                <p>Nama     :</p>
+            </div>
+            <div class = "col-6">
+                <p>Moh. Khoirul</p>
+            </div>
+        </div>
+    )
+}
+
 ReactDOM.render(<Navbar />, document.getElementById('navbar'));
+ReactDOM.render(<Body />, document.getElementById('body'));
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
