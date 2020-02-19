@@ -74,13 +74,18 @@ const Body = () => {
     )
 }
 
-const Footer = () = {
-    
-}
+const Footer = () =>{
+    return (
+    <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Copyright © 2020 kariafin998@gmail.com</a>
+  </nav>
+    )
+  };
 
 ReactDOM.render(<Navbar />, document.getElementById('navbar'));
 ReactDOM.render(<Body />, document.getElementById('body'));
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Footer />, document.getElementById('footer'));
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
