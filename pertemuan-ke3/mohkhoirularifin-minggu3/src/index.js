@@ -6,7 +6,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const Navbar = () => {
-    return <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    return <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -48,16 +48,26 @@ const Body = () => {
                     <img src={logo} className="App-logo" alt="logo" />
                 </div>
                 <div class = "col-1">
-                    <p>Nama     :</p>
-                    <p>TTL     :</p>
-                    <p>Gender     :</p>
-                    <p>Alamat     :</p>
-                    <p>Status     :</p>
-                    <p>Hobi     :</p>
-                    <p>Email     :</p>
-                    <p>Github     :</p>
+                    <p>Nama</p>
+                    <p>TTL</p>
+                    <p>Gender</p>
+                    <p>Alamat</p>
+                    <p>Status</p>
+                    <p>Hobi</p>
+                    <p>Email</p>
+                    <p>Github</p>
                 </div>
-                <div class = "col-6">
+                <div class = "col-1">
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+                </div>
+                <div class = "col-5">
                     <p> Moh. Khoirul Arifin</p>
                     <p> Nganjuk, 22 November 1998</p>
                     <p> Laki-laki</p>

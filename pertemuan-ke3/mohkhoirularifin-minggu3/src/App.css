@@ -40,5 +40,6 @@
 .Title {
   font-size: calc(30px + 4vmin);
   text-align: center;
-  padding-bottom: 25px;
+  padding-top: 65px;
+  padding-bottom: 60px;
 }
