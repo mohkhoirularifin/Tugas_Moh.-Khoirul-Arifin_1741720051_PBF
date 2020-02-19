@@ -41,23 +41,41 @@ const Navbar = () => {
 
 const Body = () => {
     return(
-        // <div class = "container">
-        //     <div class = "text" >
-        //         <center><h1>BIODATA</h1></center>
-        //     </div>
-        // </div>
-        <div class = "row">
-            <div class = "col-5">
-                <img src={logo} className="App-logo" alt="logo" />
+        <header className="App-header">
+            <p className="Title">BIODATA</p>
+            <div class = "row">
+                <div class = "col-5">
+                    <img src={logo} className="App-logo" alt="logo" />
+                </div>
+                <div class = "col-1">
+                    <p>Nama     :</p>
+                    <p>TTL     :</p>
+                    <p>Gender     :</p>
+                    <p>Alamat     :</p>
+                    <p>Status     :</p>
+                    <p>Hobi     :</p>
+                    <p>Email     :</p>
+                    <p>Github     :</p>
+                </div>
+                <div class = "col-6">
+                    <p> Moh. Khoirul Arifin</p>
+                    <p> Nganjuk, 22 November 1998</p>
+                    <p> Laki-laki</p>
+                    <p> Ds. Pandean, RT. 003/RW. 002, Kecamatan Gondang, Nganjuk</p>
+                    <p> Mahasiswa</p>
+                    <p> Memancing</p>
+                    <p> karifin998@gmail.com</p>
+                    <a href = "https://github.com/mohkhoirularifin" target="blank">
+                        https://github.com/mohkhoirularifin
+                    </a>
+                </div>
             </div>
-            <div class = "col-1">
-                <p>Nama     :</p>
-            </div>
-            <div class = "col-6">
-                <p>Moh. Khoirul</p>
-            </div>
-        </div>
+        </header>
     )
+}
+
+const Footer = () = {
+    
 }
 
 ReactDOM.render(<Navbar />, document.getElementById('navbar'));
