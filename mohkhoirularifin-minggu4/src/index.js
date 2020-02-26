@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import HelloComponent from './component/HelloComponent';
 import StatefullComponent from './container/StateFullComponent';
+import FormLogin from './Login/FormLogin';
 
 // function HelloWorld ()
 // {
@@ -21,7 +22,7 @@ import StatefullComponent from './container/StateFullComponent';
 //         return <p> Ini Adalah Statefull Component </p>
 //     }
 // }
-ReactDOM.render(<HelloComponent />, document.getElementById('root'));
+ReactDOM.render(<FormLogin />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
