@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import HelloComponent from './component/HelloComponent';
+import StatefullComponent from './container/StateFullComponent';
 
 // function HelloWorld ()
 // {
@@ -14,12 +15,12 @@ import HelloComponent from './component/HelloComponent';
 //     return <p> Ini adalah Arrow Function </p>
 // }
 
-class StatefullComponent extends React.Component
-{
-    render() {
-        return <p> Ini Adalah Statefull Component </p>
-    }
-}
+// class StatefullComponent extends React.Component
+// {
+//     render() {
+//         return <p> Ini Adalah Statefull Component </p>
+//     }
+// }
 ReactDOM.render(<HelloComponent />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
