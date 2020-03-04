@@ -8,8 +8,12 @@ const Post = (props) => {
             </div>
             <div className="konten-artikel">
                 <div className="judul-artikel">{props.judul}</div>
-                <p className="isi-artikel">{props.isi}</p>
-                <button className="btn btn-sm btn-warning" onClick={() => props.hapusArtikel(props.idArtikel)}>Hapus</button>
+                <p className="isi-artikel">NIM &emsp;&emsp; : {props.NIM}</p>
+                <p className="isi-artikel">alamat &emsp; : {props.alamat}</p>
+                <p className="isi-artikel">No. Hp &emsp; : {props.hp}</p>
+                <p className="isi-artikel">Angkatan : {props.angkatan}</p>
+                <p className="isi-artikel">Status&emsp;&emsp; : {props.status}</p>
+                <button className="btn btn-sm btn-danger" onClick={() => props.hapusArtikel(props.idArtikel)}>Hapus</button>
             </div>
         </div>
     )

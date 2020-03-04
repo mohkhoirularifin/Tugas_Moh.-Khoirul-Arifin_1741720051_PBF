@@ -1,34 +1,22 @@
 {
-  "posts": [
+  "mahasiswa": [
     {
-      "userId": 1,
       "id": 2,
-      "title": "Pelaksanaan Rapat Hasil Akhir Yudisium Semester Ganjil 2019/2020",
-      "body": "Jumat (17/1/20) kemarin, Jurusan Teknologi Informasi Politeknik Negeri Malang (JTI Polinema) menyelenggarakan rapat hasil yudisium semester ganjil tahun ajaran 2019/2020. Acara ini dimulai pada jam 8.30 dan bertempat di lantai 8, Gedung Teknik Sipil, Politeknik Negeri..."
+      "NIM": 1741720051,
+      "nama": "Moh. Khoirul Arifin",
+      "alamat": "Jl. Semanggi Barat, No. 28 Kelurahan Jatimulyo",
+      "hp": "081556555385",
+      "angkatan": 2017,
+      "status": "aktif"
     },
     {
-      "userId": 1,
-      "id": 3,
-      "title": "Kemeriahan Penutupan Digital Talent Scholarship VSGA 2019 Batch 2 di Politeknik Negeri Malang",
-      "body": "Selesai sudah Digital Talent Scholarship (DTS) Batch 2 2019 dengan program Vocational School Graduate Academy&nbsp;(VSGA) di Jurusan Teknologi Informasi (JTI) Politenik Negeri Malang (Polinema). Pelatihan yang didanai Kominfo dan bekerjasama dengan Jurusan..."
-    },
-    {
-      "userId": 1,
-      "id": 4,
-      "title": "Jalin Kerjasama dengan Shenyang University of Technology, JTI Polinema Terbangkan Empat Mahasiswa ke Tiongkok",
-      "body": "Empat mahasiswa Jurusan Teknologi Informasi (JTI) Politeknik Negeri Malang (Polinema) telah berangkat ke negeri tirai bambu pada hari selasa (8/10/2019) kemarin, dalam rangka kerjasama antar kampus Polinema dan Shenyang University of Technology. Para mahasiswa tersebut..."
-    },
-    {
-      "userId": 1,
-      "id": 1583295587787,
-      "title": "Pertemuan Kedua Virus berbahaya dari Indonesia dan Cina",
-      "body": "Kemarin, telah terjadi pertemuan antara Virus dari Cina yaitu Korona dan virus dari Indonesia yaitu TBC."
-    },
-    {
-      "userId": 1,
-      "id": 1583340454958,
-      "title": "Harga HP di Indonesia Per Maret 2020",
-      "body": "Harga HP pada bulan ini mengalami penurunan dikarenakan anjloknya harga Bitcoin........"
+      "id": 1583346872032,
+      "NIM": "1741729873",
+      "nama": "Agus Suga Cahyono",
+      "alamat": "Jl. Ikan Gergaji",
+      "hp": "098765432345",
+      "angkatan": "2017",
+      "status": "Aktif"
     }
   ],
   "comments": [],
