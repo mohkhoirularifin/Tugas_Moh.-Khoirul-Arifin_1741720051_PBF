@@ -17,6 +17,15 @@
       "hp": "098765432345",
       "angkatan": "2017",
       "status": "Aktif"
+    },
+    {
+      "id": 1583383838488,
+      "NIM": "1765456678",
+      "nama": "Ryan Reinold",
+      "alamat": "Jl. Semanggi Utara No. 98",
+      "hp": "087767886544",
+      "angkatan": "2016",
+      "status": "Lulus"
     }
   ],
   "comments": [],
