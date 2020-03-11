@@ -1,4 +1,5 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,21 +7,40 @@ import {
   Link,
   Redirect,
   useHistory,
-  useLocation
+  useLocation,
+  useRouteMatch,
+  useParams
 } from "react-router-dom"
+import {Navbar, Nav} from 'react-bootstrap';
 import './App.css';
 
 export default function AuthExample() {
   return (
     <Router>
       <div>
-        <AuthButton />
+      <Navbar bg="light" expand="lg">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="/public">Home</Nav.Link>
+            <Nav.Link href="/topics">Kategori</Nav.Link>
+            <Nav.Link href="/private">Keranjang</Nav.Link>
+          </Nav>
+          <Nav>
+            <AuthButton />
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+        {/* <AuthButton /> */}
         <ul>
           <li>
-            <Link to = "/public">Public Page</Link>
+            <Link to = "/public">Home</Link>
           </li>
           <li>
-            <Link to = "/private">Private Page</Link>
+            <Link to = "/topics">Kategori</Link>
+          </li>
+          <li>
+            <Link to = "/private">Keranjang</Link>
           </li>
         </ul>
 
@@ -34,10 +54,52 @@ export default function AuthExample() {
           <PrivateRoute path = "/private">
             <ProtectedPage />
           </PrivateRoute>
+          <Route path = "/topics">
+            <Topics />
+          </Route>
         </Switch>
       </div>
     </Router>
   );
+}
+
+function Topics(){
+  let { path, url } = useRouteMatch();
+  return(
+    <div>
+      <h2>Topics</h2>
+      <ul>
+        <li>
+          <Link to={`${url}/Sate, Nasi Goreng`}>Elektronik</Link>
+        </li>
+        <li>
+          <Link to={`${url}/Wisata alam, Museum`}>Otomotif</Link>
+        </li>
+        <li>
+          <Link to={`${url}/Ibis, JW Marriot`}>Fashion</Link>
+        </li>
+      </ul>
+
+      <Switch>
+        <Route exact path={path}>
+          <h3>Please select a topic.</h3>
+        </Route>
+        <Route path={`${path}/:topicId`}>
+          <Topic/>
+        </Route>
+      </Switch>
+    </div>
+  );
+}
+
+function Topic() {  
+  let {topicId} = useParams();
+
+  return (
+    <div>
+      <h3>{topicId}</h3>
+    </div>
+  )
 }
 
 const fakeAuth = {
@@ -60,7 +122,7 @@ function AuthButton() {
       Welcome!{" "}
       <button
         onClick = {() => {
-          fakeAuth.signout(() => history.push("/"));
+          fakeAuth.signout(() => history.push("/public"));
         }}
       >
         Sign Out        
@@ -112,7 +174,7 @@ function LoginPage() {
 
   return (
     <div>
-      <p>You Must Log In To View The Page at { from.pathname }</p>
+      <p>You Must Log In</p>
       <button onClick = {login}>Log In</button>
     </div>
   );
