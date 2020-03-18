@@ -6,6 +6,7 @@ import MainReducer from './reducers/mainReducer'
 import App from './App';
 import Table from './containers/table'
 import CreateTodo from './containers/createTodo'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 // import registerServiceWorker from './registerServiceWorker';
 import * as serviceWorker from './serviceWorker';

@@ -19,8 +19,8 @@ class createTodo extends Component {
     render(){
         return(
             <div className="form-group row">
-                <div className="col-sm-10">
-                    <input  onChange={this.onChangeTodoText} value={this.state.todotext} type="text" className="form-control" id="inputEmail3" placeholder="add todo here"/>
+                <div className="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
+                    <input  onChange={this.onChangeTodoText} value={this.state.todotext} type="text" className="form-control" id="inputEmail3" style={{textAlign: "center"}} placeholder="add todo here"/>
                         <button type="button" onClick={ () => this.setState({ todotext: '' }) } style={{marginTop: "25px", marginRight: "15px"}} className="btn btndanger">
                             Cancel
                         </button>
