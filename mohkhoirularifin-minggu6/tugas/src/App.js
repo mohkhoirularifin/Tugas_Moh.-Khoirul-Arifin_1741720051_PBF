@@ -11,38 +11,20 @@ import {
   useRouteMatch,
   useParams
 } from "react-router-dom"
-import {Navbar, Nav} from 'react-bootstrap';
+// import {Navbar, Nav} from 'react-bootstrap';
 import './App.css';
+import Logo from "./logo.jpg";
 
 export default function AuthExample() {
   return (
     <Router>
       <div>
-      <Navbar bg="light" expand="lg">
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="/public">Home</Nav.Link>
-            <Nav.Link href="/topics">Kategori</Nav.Link>
-            <Nav.Link href="/private">Keranjang</Nav.Link>
-          </Nav>
-          <Nav>
-            <AuthButton />
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-        {/* <AuthButton /> */}
-        <ul>
-          <li>
-            <Link to = "/public">Home</Link>
-          </li>
-          <li>
-            <Link to = "/topics">Kategori</Link>
-          </li>
-          <li>
-            <Link to = "/private">Keranjang</Link>
-          </li>
-        </ul>
+      <ul>
+        <li><Link to = "/public">Home</Link></li>
+        <li><Link to = "/topics">Kategori</Link></li>
+        <li><Link to = "/private">Keranjang</Link></li>
+        <li style={{position: 'absolute', right: 0}}><a class="active" href="#about"><AuthButton /></a></li>
+      </ul>
 
         <Switch>
           <Route path = "/public">
@@ -158,7 +140,8 @@ function PublicPage() {
 }
 
 function ProtectedPage() {  
-  return <h3>Private</h3>
+  return<img src={Logo}></img>
+  
 }
 
 function LoginPage() {
