@@ -8,12 +8,13 @@ import * as serviceWorker from './serviceWorker';
 // import registerServiceWorker from './registerServiceWorker';
 
 
-const store = compose(window.devToolsExtension ? window.devToolsExtension() : f =>
-f)(createStore)(MainReducer)
+const store = compose(window.devToolsExtension ? window.devToolsExtension() : f =>f)(createStore)(MainReducer)
+
 ReactDOM.render(<Provider store={store}>
-<App />
+    <App />
 </Provider>
-, document.getElementById('root'));serviceWorker.unregister();;
+, document.getElementById('root'));
+serviceWorker.unregister();
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
