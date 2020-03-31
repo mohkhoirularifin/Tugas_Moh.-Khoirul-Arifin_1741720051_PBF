@@ -1,0 +1,11 @@
+.gambar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.api{
+    display: grid;
+  
+}

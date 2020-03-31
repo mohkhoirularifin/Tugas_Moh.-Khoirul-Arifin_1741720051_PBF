@@ -12,6 +12,7 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Logo from "./header.jpg";
 import './App.css';
+import News from './News/News';
 
 export default function AuthExample() {
   return (
@@ -20,7 +21,7 @@ export default function AuthExample() {
       <ul>
         <li><Link to = "/public">Home</Link></li>
         <li><Link to = "/topics">Kategori</Link></li>
-        <li><Link to = "/private">Keranjang</Link></li>
+        <li><Link to = "/private">Berita Kesehatan terkini</Link></li>
         <li style={{position: 'absolute', right: 0}}><a className="active" href="#about"><AuthButton /></a></li>
       </ul>
 
@@ -299,47 +300,14 @@ function PublicPage() {
 
 function ProtectedPage() {  
   return(
-    <header className="App-header">
+    <div>
       <img src={Logo} width="100%"></img>
-      <p className="Title">BIODATA</p>
-            <div class = "row">
-                <div class = "col-5">
-                    <img src={Logo} className="App-logo" alt="logo" />
-                </div>
-                <div class = "col-1">
-                    <p>Nama</p>
-                    <p>TTL</p>
-                    <p>Gender</p>
-                    <p>Alamat</p>
-                    <p>Status</p>
-                    <p>Hobi</p>
-                    <p>Email</p>
-                    <p>Github</p>
-                </div>
-                <div class = "col-1">
-                    <p>:</p>
-                    <p>:</p>
-                    <p>:</p>
-                    <p>:</p>
-                    <p>:</p>
-                    <p>:</p>
-                    <p>:</p>
-                    <p>:</p>
-                </div>
-                <div class = "col-5">
-                    <p> Moh. Khoirul Arifin</p>
-                    <p> Nganjuk, 22 November 1998</p>
-                    <p> Laki-laki</p>
-                    <p> Ds. Pandean, RT. 003/RW. 002, Kecamatan Gondang, Nganjuk</p>
-                    <p> Mahasiswa</p>
-                    <p> Memancing</p>
-                    <p> karifin998@gmail.com</p>
-                    <a href = "https://github.com/mohkhoirularifin" target="blank">
-                        https://github.com/mohkhoirularifin
-                    </a>
-                </div>
-            </div>
-    </header>
+      <br/>
+      <br></br>
+      <div className="api-grid">
+        <News/>
+      </div>
+    </div>  
   );
   
 }
@@ -357,7 +325,7 @@ function LoginPage() {
 
   return (
     <div>
-      <p>You Must Log In</p>
+      <h1>Anda harus Login Sebelum Membuka Berita</h1>
       <button onClick = {login}>Log In</button>
     </div>
   );
