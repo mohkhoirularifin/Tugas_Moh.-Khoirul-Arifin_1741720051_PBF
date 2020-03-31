@@ -66,13 +66,12 @@ div {
 li a:hover {
   background-color: red;
 }
-
-.youtube {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* height:100vh;   */
+.videos-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-column-gap: 30px;
 }
-bebas {
-    text-align: center
+
+.videos-grid-video > iframe {
+  height:278px;
 }

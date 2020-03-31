@@ -7,8 +7,7 @@ import {
   Redirect,
   useHistory,
   useLocation,
-  useRouteMatch,
-  useParams
+  useRouteMatch
 } from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Logo from "./header.jpg";
@@ -36,7 +35,7 @@ export default function AuthExample() {
             <ProtectedPage />
           </PrivateRoute>
           <Route path = "/topics">
-            <Topics />
+            <Category />
           </Route>
         </Switch>
       </div>
@@ -44,43 +43,162 @@ export default function AuthExample() {
   );
 }
 
-function Topics(){
+function Category(){
   let { path, url } = useRouteMatch();
   return(
     <div>
-      <h2>Kumpulan Video Sholawat</h2>
+      <h2>Category</h2>
       <ul>
         <li>
-          <Link to={`${url}/Sate, Nasi Goreng`}>Elektronik</Link>
+          <Link to={`${url}/Albanjari`}>Al Banjari</Link>
         </li>
         <li>
-          <Link to={`${url}/Wisata alam, Museum`}>Otomotif</Link>
+          <Link to={`${url}/Alhabsyi`}>Al Habsyi</Link>
         </li>
         <li>
-          <Link to={`${url}/Ibis, JW Marriot`}>Fashion</Link>
+          <Link to={`${url}/Gambus`}>Gambus</Link>
         </li>
       </ul>
 
       <Switch>
         <Route exact path={path}>
-          <h3>Please select a topic.</h3>
+          <h3>Please select.</h3>
         </Route>
-        <Route path={`${path}/:topicId`}>
-          <Topic/>
-        </Route>
+        <Route path={`${url}/Albanjari`} component={Albanjari}/>
+        <Route path={`${url}/Alhabsyi`} component={Alhabsyi}/>
+        <Route path={`${url}/Gambus`} component={Gambus}/>
       </Switch>
     </div>
   );
 }
 
-function Topic() {  
-  let {topicId} = useParams();
-
-  return (
-    <div>
-      <h3>{topicId}</h3>
+function Albanjari() {  
+  return(
+    <div class="videos-grid">
+      <div class="videos-grid-video">
+        <h5 id="videos-grid">
+          Muhasabatul Qolbi [ Terbaik 1 ] - FesBan The best master 2019
+        </h5>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/advNyPPnBno" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="videos-grid-video">
+        <h5 id="videos-grid">
+          Syauqul Habib (Robbi Kholaq) - FesBan The Best Master 2017
+        </h5>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/7UrnkYUCEiE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="videos-grid-video">
+        <h5 id="videos-grid">
+          Ya Sayyidassadat - Syauqul Habib Harmoni Sholawat Alhihu | voc. Makhrus
+        </h5>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ThJH5HrTiFk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="videos-grid-video">
+        <h5 id="videos-grid">
+          Syauqul Habib (Antudkhilana) - FesBan The Best Master 2017
+        </h5>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/AlPz59pH0kI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="videos-grid-video">
+        <h5 id="videos-grid">
+          ALAMAAK / KARYA BUDAYA (TERBAIK 1) || GRAND FINAL FesBan Jawa Pos 2019
+        </h5>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Ii9Hhzzrcdg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="videos-grid-video">
+        <h5 id="videos-grid">
+          Sukarol munsyid - juara 1 Fesban Milad Ashwatul Fuad pujon
+        </h5>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VUa3EDFuHeE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
     </div>
-  )
+  );
+}
+
+function Alhabsyi() {  
+  return(
+    <div class="videos-grid">
+      <div class="videos-grid-video">
+        <h5 id="videos-grid">
+          Berkah istighfar Corona Minggat - Ahkam Syubbanul Muslimin HD
+        </h5>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/DnDPjXEa6Hw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="videos-grid-video">
+        <h5 id="videos-grid">
+          "NEW" KARTONYONO MEDOT JANJI versi SHOLAWAT | SYUBBANUL MUSLIMIN. HD
+        </h5>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/4iIknKif36M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="videos-grid-video">
+        <h5 id="videos-grid">
+          MAN ANA - HADRAH AHBAABUL MUSTHOFA LAMONGAN - RANTAU PAPUA - PILANG - LAMONGAN BERSHOLAWAT
+        </h5>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Ap2qOWcHCc4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="videos-grid-video">
+        <h5 id="videos-grid">
+          SA'DUNA FIDDUNYA - LIVE PONPES DARUL ULUM JOMBANG BERSHOLAWAT
+        </h5>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/R-FaMnksnCY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="videos-grid-video">
+        <h5 id="videos-grid">
+          Sa'duna Fiddunya Versi Majlis Riyadlul Jannah ♦ Qasidah Kesukaan Almaghfurllah KH.Maimoen Zubair
+        </h5>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mdlRvssSTZw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="videos-grid-video">
+        <h5 id="videos-grid">
+          NEW !!! Man Ana Cover by Majlis Riyadlul Jannah
+        </h5>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/UTte9RH_BjU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  );
+}
+
+function Gambus() {  
+  return(
+    <div class="videos-grid">
+      <div class="videos-grid-video">
+        <h5 id="videos-grid">
+          Gambus Balasyik Jember Live Bondowoso Terbaru 2019
+        </h5>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LJaX1nE4Cxk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="videos-grid-video">
+        <h5 id="videos-grid">
+          Lagu bikin Hati Adem | Jalsah BALASYIK JEMBER Live Kanzus Sholawat Hb. Luthfi Bin Yahya Pekalongan
+        </h5>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6wM5-6quz6Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="videos-grid-video">
+        <h5 id="videos-grid">
+          SABYAN - AISYAH ISTRI RASULULLAH | COVER
+        </h5>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/aN0ZnoRg_IY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="videos-grid-video">
+        <h5 id="videos-grid">
+          DEEN ASSALAM - Cover by SABYAN
+        </h5>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/1OMD_LSELAM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="videos-grid-video">
+        <h5 id="videos-grid">
+          "MEWAAAH" Simak sampe habis | BALASYIK JALSAH Live PP. Baitul Muhklasin Malang Terbaru 2019
+        </h5>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ipGW9SHA4Bg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      <div class="videos-grid-video">
+        <h5 id="videos-grid">
+          YA MAULANA - SABYAN
+        </h5>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Ii1jvubIC8g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  );
 }
 
 const fakeAuth = {
@@ -180,7 +298,49 @@ function PublicPage() {
 }
 
 function ProtectedPage() {  
-  return<img src={Logo} width="100%"></img>
+  return(
+    <header className="App-header">
+      <img src={Logo} width="100%"></img>
+      <p className="Title">BIODATA</p>
+            <div class = "row">
+                <div class = "col-5">
+                    <img src={Logo} className="App-logo" alt="logo" />
+                </div>
+                <div class = "col-1">
+                    <p>Nama</p>
+                    <p>TTL</p>
+                    <p>Gender</p>
+                    <p>Alamat</p>
+                    <p>Status</p>
+                    <p>Hobi</p>
+                    <p>Email</p>
+                    <p>Github</p>
+                </div>
+                <div class = "col-1">
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+                    <p>:</p>
+                </div>
+                <div class = "col-5">
+                    <p> Moh. Khoirul Arifin</p>
+                    <p> Nganjuk, 22 November 1998</p>
+                    <p> Laki-laki</p>
+                    <p> Ds. Pandean, RT. 003/RW. 002, Kecamatan Gondang, Nganjuk</p>
+                    <p> Mahasiswa</p>
+                    <p> Memancing</p>
+                    <p> karifin998@gmail.com</p>
+                    <a href = "https://github.com/mohkhoirularifin" target="blank">
+                        https://github.com/mohkhoirularifin
+                    </a>
+                </div>
+            </div>
+    </header>
+  );
   
 }
 
