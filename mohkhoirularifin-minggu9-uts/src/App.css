@@ -58,7 +58,21 @@ li a {
   float: none;
 }
 
+div {
+  border:1px dotted red;
+}
+
 /* Change the link color to #111 (black) on hover */
 li a:hover {
   background-color: red;
+}
+
+.youtube {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height:100vh;   */
+}
+bebas {
+    text-align: center
 }
