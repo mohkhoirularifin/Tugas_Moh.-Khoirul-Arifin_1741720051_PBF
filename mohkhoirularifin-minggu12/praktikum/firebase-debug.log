@@ -1,0 +1,25 @@
+[debug] [2020-04-23T01:48:22.502Z] ----------------------------------------------------------------------
+[debug] [2020-04-23T01:48:22.510Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\KHOIRUL\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-04-23T01:48:22.510Z] CLI Version:   8.1.1
+[debug] [2020-04-23T01:48:22.511Z] Platform:      win32
+[debug] [2020-04-23T01:48:22.511Z] Node Version:  v12.15.0
+[debug] [2020-04-23T01:48:22.512Z] Time:          Thu Apr 23 2020 08:48:22 GMT+0700 (Indochina Time)
+[debug] [2020-04-23T01:48:22.512Z] ----------------------------------------------------------------------
+[debug] [2020-04-23T01:48:22.513Z] 
+[debug] [2020-04-23T01:48:22.530Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-23T01:48:22.532Z] > authorizing via signed-in user
+[debug] [2020-04-23T01:48:22.532Z] [iam] checking project minggu12w for permissions ["firebase.projects.get"]
+[debug] [2020-04-23T01:48:22.539Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/minggu12w:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-04-23T01:48:24.102Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 23 Apr 2020 01:48:24 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1194","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-23T01:48:24.105Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/minggu12w  
+ 
+[debug] [2020-04-23T01:48:24.737Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 23 Apr 2020 01:48:25 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Serving from 'G:\Kuliah\Semester6\PemrogramanBerbasisFramework\mohkhoirularifin-minggu12\praktikum'...
+[info] 
+[debug] [2020-04-23T01:48:24.745Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/minggu12w/webApps/-/config  
+ 
+[debug] [2020-04-23T01:48:25.930Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 23 Apr 2020 01:48:26 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
