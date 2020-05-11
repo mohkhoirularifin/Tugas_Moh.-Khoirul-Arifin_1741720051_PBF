@@ -10,6 +10,8 @@ import ProtectedRoute from "./component/ProtectedRoute";
 import ListProduks from "./component/ListProduks";
 import Kritik from "./component/Kritik";
 import Login from "./component/Login";
+import InfoCovid19 from "./component/InfoCovid19";
+
 
 function App(props) {
   const { isAuthenticated, isVerifying } = props;
@@ -19,6 +21,7 @@ function App(props) {
       <Switch>
         <Route path="/login" component={Login} />
         <Route path="/detail" component={DetailProduk} isAuthenticated={isAuthenticated} isVerifying={isVerifying} />
+        <Route path="/infocovid19" component={InfoCovid19} />
         <ProtectedRoute path="/keranjang" component={Keranjang} isAuthenticated={isAuthenticated} isVerifying={isVerifying}/>
         <ProtectedRoute path="/kritik" component={Kritik} isAuthenticated={isAuthenticated} isVerifying={isVerifying}/>
         <Route path="/" component={ListProduks} isAuthenticated={isAuthenticated} isVerifying={isVerifying}/>

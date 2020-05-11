@@ -29,6 +29,11 @@ export default class Navbar extends Component {
                         Kritik
                     </ButtonContainer>
                 </Link>
+                <Link to="/infocovid19" className="ml-2">
+                    <ButtonContainer>
+                        Info Covid-19 Terkini
+                    </ButtonContainer>
+                </Link>
             </NavWrapper>
         )
     }
