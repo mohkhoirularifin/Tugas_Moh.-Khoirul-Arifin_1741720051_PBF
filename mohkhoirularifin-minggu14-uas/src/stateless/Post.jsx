@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import logo from "../logo.svg";
+import logo from "../logo2.svg";
 import { ButtonContainer } from "../component/Button";
 
 const Post = (props) => {
