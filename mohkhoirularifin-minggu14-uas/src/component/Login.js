@@ -54,7 +54,7 @@ class Login extends Component {
         const { classes, loginError, isAuthenticated } =
             this.props;
         if (isAuthenticated) {
-            return <Redirect to="/" />;
+            return <Redirect to="/Keranjang" />;
         } else {
             return (
                 <Container component="main" maxWidth="xs">
