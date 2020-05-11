@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from "react-redux";
 import { logoutUser } from "../actions/auth";
 
-class Keranjang extends Component {
+class Kritik extends Component {
     handleLogout = () => {
         const { dispatch } = this.props;
         dispatch(logoutUser());
@@ -12,7 +12,7 @@ class Keranjang extends Component {
         const { isLoggingOut, logoutError } = this.props;
         return (
             <div>
-                <h1>Keranjang</h1>
+                <h1>Kritik</h1>
                 <button
                     onClick={this.handleLogout}>Logout
                 </button>
@@ -30,4 +30,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect(mapStateToProps)(Keranjang);
+export default connect(mapStateToProps)(Kritik);
