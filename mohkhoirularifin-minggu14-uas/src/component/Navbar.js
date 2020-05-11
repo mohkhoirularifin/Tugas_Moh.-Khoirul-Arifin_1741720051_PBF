@@ -24,6 +24,11 @@ export default class Navbar extends Component {
                         Keranjang
                     </ButtonContainer>
                 </Link>
+                <Link to="/kritik" className="ml-auto">
+                    <ButtonContainer>
+                        Kritik
+                    </ButtonContainer>
+                </Link>
             </NavWrapper>
         )
     }
