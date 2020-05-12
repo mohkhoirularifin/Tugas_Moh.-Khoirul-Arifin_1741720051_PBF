@@ -1,14 +1,17 @@
 import React, { Component } from "react";
-import Post from "../stateless/Post";
+import PostKeranjang from "../stateless/PostKeranjang";
 import firebase from "firebase";
+import { logoutUser } from "../actions/auth";
+import { connect } from "react-redux";
+import { ButtonContainer } from "./Button";
 
-class ListProduks extends Component {
+class Keranjang extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       // Komponen State dari React Untuk Statefull Component
-      listArtikel: [], // Variabel Array yang Digunakan untuk Menyimpan data API
+      listKeranjang: [], // Variabel Array yang Digunakan untuk Menyimpan data API
     };
   }
 
@@ -39,11 +42,11 @@ class ListProduks extends Component {
 
   handleHapusArtikel = (idArtikel) => {
     // fungsi yang meng-handle button action hapus data
-    const { listArtikel } = this.state;
-    const newState = listArtikel.filter((data) => {
+    const { listKeranjang } = this.state;
+    const newState = listKeranjang.filter((data) => {
       return data.uid !== idArtikel;
     });
-    this.setState({ listArtikel: newState });
+    this.setState({ listKeranjang: newState });
   };
 
   handleTombolSimpan = (event) => {
@@ -54,19 +57,19 @@ class ListProduks extends Component {
 
     if (uid && title && body) {
       // cek apakah semua data memiliki nilai (tidak null)
-      const { listArtikel } = this.state;
-      const indeksArtikel = listArtikel.findIndex((data) => {
+      const { listKeranjang } = this.state;
+      const indeksArtikel = listKeranjang.findIndex((data) => {
         return data.uid === uid;
       });
-      listArtikel[indeksArtikel].title = title;
-      listArtikel[indeksArtikel].body = body;
-      this.setState({ listArtikel });
+      listKeranjang[indeksArtikel].title = title;
+      listKeranjang[indeksArtikel].body = body;
+      this.setState({ listKeranjang });
     } else if (title && body) {
       // Jika data belum ada di server
       const uid = new Date().getTime().toString();
-      const { listArtikel } = this.state;
-      listArtikel.push({ uid, title, body });
-      this.setState({ listArtikel });
+      const { listKeranjang } = this.state;
+      listKeranjang.push({ uid, title, body });
+      this.setState({ listKeranjang });
     }
 
     this.refs.judulArtikel.value = "";
@@ -74,24 +77,38 @@ class ListProduks extends Component {
     this.refs.uid.value = "";
   };
 
+  handleLogout = () => {
+    const { dispatch } = this.props;
+    dispatch(logoutUser());
+  };
+
   render() {
+    const { isLoggingOut, logoutError } = this.props;
     return (
       <React.Fragment>
         <div className="py-5">
           <div className="container">
+            <div className="col-12 mx-auto my-2 text-right text-title">
+              <ButtonContainer onClick={this.handleLogout}>
+                Logout
+              </ButtonContainer>
+              {isLoggingOut && <p>Logging Out....</p>}
+              {logoutError && <p>Error logging out</p>}
+            </div>
             <div className="row">
               <div className="col-10 mx-auto my-2 text-center text-title">
                 <h1 className="text-capitalize font-weight-bold">
-                  Daftar Produk
+                  Daftar Keranjang
                 </h1>
               </div>
             </div>
+
             <div className="row">
               {
-                // Looping dan masukan untuk setiap data yang ada di listArtikel ke variabel artikel
-                this.state.listArtikel.map((artikel) => {
+                // Looping dan masukan untuk setiap data yang ada di listKeranjang ke variabel artikel
+                this.state.listKeranjang.map((artikel) => {
                   return (
-                    <Post
+                    <PostKeranjang
                       key={artikel.id}
                       judul={artikel.title}
                       isi={artikel.price}
@@ -114,4 +131,11 @@ class ListProduks extends Component {
   }
 }
 
-export default ListProduks;
+function mapStateToProps(state) {
+  return {
+    isLoggingOut: state.auth.isLoggingOut,
+    logoutError: state.auth.logoutError,
+  };
+}
+
+export default connect(mapStateToProps)(Keranjang);

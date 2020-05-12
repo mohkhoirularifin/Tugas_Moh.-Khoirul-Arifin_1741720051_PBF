@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../logo2.svg";
+import logo from "../logo3.svg";
 import { ButtonContainer } from "../component/Button";
 
-const Post = (props) => {
+const PostKeranjang = (props) => {
   return (
     <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
       <div className="card">
@@ -104,4 +104,4 @@ const ProductWrapper = styled.div`
     }
 `;
 
-export default Post;
+export default PostKeranjang;

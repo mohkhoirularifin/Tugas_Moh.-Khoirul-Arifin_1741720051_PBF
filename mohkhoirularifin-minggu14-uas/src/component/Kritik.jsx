@@ -2,6 +2,9 @@ import React, {Component} from "react";
 import './Kritik.css';
 import Post from "../stateless/PostKritik";
 import firebase from "firebase";
+import { logoutUser } from "../actions/auth";
+import { ButtonContainer } from "./Button";
+import { connect } from "react-redux";
 
 class Kritik extends Component{
     constructor(props) {
@@ -67,11 +70,29 @@ class Kritik extends Component{
         this.refs.isiArtikel.value = "";
         this.refs.uid.value = "";
     };
+
+    handleLogout = () => {
+        const { dispatch } = this.props;
+        dispatch(logoutUser());
+      };
     
     render() {
+        const { isLoggingOut, logoutError } = this.props;
         return(
             <div className="post-artikel">
                 <div className="form pb-2 border-bottom">
+                <div className="col-12 mx-auto my-2 text-right text-title">
+              <ButtonContainer onClick={this.handleLogout}>
+                Logout
+              </ButtonContainer>
+              {isLoggingOut && <p>Logging Out....</p>}
+              {logoutError && <p>Error logging out</p>}
+            </div>
+            <div className="col-10 mx-auto my-2 text-center text-title">
+                <h1 className="text-capitalize font-weight-bold">
+                  Halaman Kritik & Saran
+                </h1>
+              </div>
                     <div className="form-group row">
                         <label htmlFor="title" className="col-sm-2 col-form-label">Judul</label>
                         <div className="col-sm-10">
@@ -87,7 +108,7 @@ class Kritik extends Component{
                     <input type="hidden" name="uid" ref="uid" />
                     <button type="submit" className="btn btn-primary" onClick={this.handleTombolSimpan}>Simpan</button>
                 </div>
-                <h2>Daftar Artikel</h2>
+                <br></br>
                 {   // Looping dan masukan untuk setiap data yang ada di listKritik ke variabel artikel
                     this.state.listKritik.map(artikel => {  
                         return <Post key={artikel.uid} judul={artikel.title} isi={artikel.body}
@@ -99,4 +120,11 @@ class Kritik extends Component{
     }
 }
 
-export default Kritik;
+function mapStateToProps(state) {
+    return {
+      isLoggingOut: state.auth.isLoggingOut,
+      logoutError: state.auth.logoutError,
+    };
+  }
+
+  export default connect(mapStateToProps)(Kritik);
