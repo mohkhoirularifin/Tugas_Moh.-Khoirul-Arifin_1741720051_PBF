@@ -5,13 +5,20 @@ const PostInfoCovid19 = (props) => {
   return (
     <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
       <div className="card">
-        <div className="col-10 mx-auto my-2 text-center text-title">{props.negara}</div>
-        <div className="card-footer d-flex justify-content-between">
-        <p className="text-capitalize font-weight-bold">Positif {props.positif}</p>
-        <p className="text-capitalize font-weight-bold">Sembuh {props.sembuh}</p>
-        <p className="text-capitalize font-weight-bold">Meninggal {props.meninggal}</p>
+        <div className="col-10 mx-auto my-2 text-center text-title">
+          {props.negara}
         </div>
-        
+        <div className="card-footer d-flex justify-content-between">
+          <p className="text-capitalize font-weight-bold">
+            Positif {props.positif}
+          </p>
+          <p className="text-capitalize font-weight-bold">
+            Sembuh {props.sembuh}
+          </p>
+          <p className="text-capitalize font-weight-bold">
+            Meninggal {props.meninggal}
+          </p>
+        </div>
       </div>
     </ProductWrapper>
   );

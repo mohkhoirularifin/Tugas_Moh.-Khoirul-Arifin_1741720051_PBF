@@ -1,7 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './component/Navbar';
-import DetailProduk from './component/DetailProduk';
 import Keranjang from './component/Keranjang';
 import React from "react";
 import { Route, Switch } from "react-router-dom";
@@ -20,7 +19,6 @@ function App(props) {
       <Navbar />
       <Switch>
         <Route path="/login" component={Login} />
-        <Route path="/detail" component={DetailProduk} isAuthenticated={isAuthenticated} isVerifying={isVerifying} />
         <Route path="/infocovid19" component={InfoCovid19} />
         <ProtectedRoute path="/keranjang" component={Keranjang} isAuthenticated={isAuthenticated} isVerifying={isVerifying}/>
         <ProtectedRoute path="/kritik" component={Kritik} isAuthenticated={isAuthenticated} isVerifying={isVerifying}/>
