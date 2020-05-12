@@ -34,7 +34,7 @@ class InfoCovid19 extends Component {
   }
 
   render() {
-    const { error, isLoaded, posts } = this.state;
+    const { error, isLoaded } = this.state;
 
     if (error) {
       return <div>Error in loading</div>;
@@ -57,7 +57,7 @@ class InfoCovid19 extends Component {
                   // Looping dan masukan untuk setiap data yang ada di posts ke variabel artikel
                   this.state.posts.map((post) => {
                     return (
-                        <Post
+                      <Post
                         key={post.id}
                         negara={post.country}
                         positif={post.cases}
@@ -65,21 +65,7 @@ class InfoCovid19 extends Component {
                         meninggal={post.deaths}
                         idArtikel={post.id}
                         hapusArtikel={this.handleHapusArtikel}
-                        />
-                    //   <li key={post.id} align="start">
-                    //     <div>
-                    //       <p className="title">Negara : {post.country}</p>
-                    //       <p className="body">
-                    //         Positif : <em>{post.cases}</em>
-                    //       </p>
-                    //       <p className="body">
-                    //         Sembuh : <em>{post.recovered}</em>
-                    //       </p>
-                    //       <p className="body">
-                    //         Meninggal : <em>{post.deaths}</em>
-                    //       </p>
-                    //     </div>
-                    //   </li>
+                      />
                     );
                   })
                 }

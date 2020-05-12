@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import logo from "../logo2.svg";
@@ -21,12 +21,12 @@ const Post = (props) => {
           </Link>
           <ButtonContainer
             className="cart-btn"
-            disabled={props.inCart ? true : false}
+            disabled={props.keranjang ? true : false}
             onClick={() => {
               console.log("Tambah Ke Chart");
             }}
           >
-            {props.inCart ? (
+            {props.keranjang ? (
               <p className="text-capitalize mb-0" disabled>
                 {" "}
                 in Cart
