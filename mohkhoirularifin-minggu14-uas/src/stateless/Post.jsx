@@ -19,7 +19,7 @@ const Post = (props) => {
             className="cart-btn"
             disabled={props.keranjang ? true : false}
             onClick={() => {
-              console.log("Tambah Ke Chart");
+              props.tambahKeranjang(props.idArtikel);
             }}
           >
             {props.keranjang ? (

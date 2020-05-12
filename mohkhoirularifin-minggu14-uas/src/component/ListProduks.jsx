@@ -8,7 +8,9 @@ class ListProduks extends Component {
 
     this.state = {
       // Komponen State dari React Untuk Statefull Component
+      products: [],
       listArtikel: [], // Variabel Array yang Digunakan untuk Menyimpan data API
+      cart: [],
     };
   }
 
@@ -74,6 +76,31 @@ class ListProduks extends Component {
     this.refs.uid.value = "";
   };
 
+  getItem = (idArtikel) => {
+    const product = this.state.listArtikel.find(data => data.id === idArtikel);
+    return product;
+  }
+
+  addToCart = (idArtikel) => {
+    console.log(`id ${idArtikel} berhasil Ditambahkan Ke dalam keranjang`)
+    //  let tempProducts = [...this.state.listArtikel];
+    //  const index = tempProducts.indexOf(this.getItem(idArtikel));
+    //  const product = tempProducts[index];
+    //  product.inCart = true;
+    //  const price = product.price;
+    //  this.setState(
+    //    () => {
+    //      return {
+    //        listArtikel: tempProducts,
+    //        cart: [...this.state.cart, product],
+    //      };
+    //    },
+    //    () => {
+    //      console.log(this.state);
+    //    }
+    //  );
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -102,6 +129,7 @@ class ListProduks extends Component {
                       memory={artikel.ram}
                       idArtikel={artikel.id}
                       hapusArtikel={this.handleHapusArtikel}
+                      tambahKeranjang={this.addToCart}
                     />
                   );
                 })
