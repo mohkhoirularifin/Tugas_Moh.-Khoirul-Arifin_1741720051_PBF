@@ -8,9 +8,9 @@ class ListProduks extends Component {
 
     this.state = {
       // Komponen State dari React Untuk Statefull Component
-      products: [],
+      // products: [],
       listArtikel: [], // Variabel Array yang Digunakan untuk Menyimpan data API
-      cart: [],
+      // cart: [],
     };
   }
 
