@@ -5,47 +5,60 @@ import { ButtonContainer } from "../component/Button";
 
 const PostKeranjang = (props) => {
   return (
-    <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
-      <div className="card">
-        <div
-          className="img-container p-5"
-        >
+    <div>
+      <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
+        <div className="card">
+          <div className="img-container p-5">
             <img
-              src="http://placeimg.com/80/80/tech"
+              src="https://kliknklik.com/blogs/wp-content/uploads/2019/08/WhatsApp-Image-2019-08-21-at-05.26.00.jpeg"
               alt="product"
               className="card-img-top"
             />
-          <ButtonContainer
-            className="cart-btn"
-            disabled={props.keranjang ? true : false}
-            onClick={() => {
-              console.log("Tambah Ke Chart");
-            }}
-          >
-            {props.keranjang ? (
-              <p className="text-capitalize mb-0" disabled>
-                {" "}
-                in Cart
-              </p>
-            ) : (
+            <ButtonContainer
+              className="cart-btn"
+              onClick={() => {
+                if (
+                  window.confirm(
+                    "Apakah anda yakin menghapus Barang ini dari Keranjang?"
+                  )
+                )
+                  props.hapusArtikel(props.idArtikel);
+              }}
+            >
               <img src={logo} alt="store" className="" />
-            )}
-          </ButtonContainer>
+            </ButtonContainer>
+          </div>
+          <div className="card-footer d-flex justify-content-between">
+            <p className="align-self-center mb-0">{props.judul}</p>
+            <h5 className="text-blue font-italic mb-0">
+              <span className="mr-1">Rp. </span>
+              {props.isi}
+            </h5>
+          </div>
+          <div className="card-footer2 d-flex justify-content-between">
+            <p className="text-capitalize font-weight-bold mb-0">
+              ✔{props.vga}
+            </p>
+            <p className="text-capitalize font-weight-bold mb-0">
+              ✔{props.proc}
+            </p>
+            <p className="text-capitalize font-weight-bold mb-0">
+              ✔{props.memory}
+            </p>
+          </div>
         </div>
-        <div className="card-footer d-flex justify-content-between">
-          <p className="align-self-center mb-0">{props.judul}</p>
-          <h5 className="text-blue font-italic mb-0">
-            <span className="mr-1">Rp. </span>
-            {props.isi}
-          </h5>
-        </div>
-        <div className="card-footer2 d-flex justify-content-between">
-          <p className="text-capitalize font-weight-bold mb-0">✔{props.vga}</p>
-          <p className="text-capitalize font-weight-bold mb-0">✔{props.proc}</p>
-          <p className="text-capitalize font-weight-bold mb-0">✔{props.memory}</p>
-        </div>
+      </ProductWrapper>
+      <div className="col-12 mx-auto my-2 text-right text-title">
+        <ButtonContainer
+          onClick={() => {
+            if (window.confirm("Apakah anda yakin Membeli Barang ini?"))
+              props.beliBarang(props.idArtikel);
+          }}
+        >
+          Beli
+        </ButtonContainer>
       </div>
-    </ProductWrapper>
+    </div>
   );
 };
 

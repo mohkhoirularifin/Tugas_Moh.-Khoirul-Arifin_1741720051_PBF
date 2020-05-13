@@ -44,7 +44,7 @@ class Keranjang extends Component {
     // fungsi yang meng-handle button action hapus data
     const { listKeranjang } = this.state;
     const newState = listKeranjang.filter((data) => {
-      return data.uid !== idArtikel;
+      return data.id !== idArtikel;
     });
     this.setState({ listKeranjang: newState });
   };
@@ -82,6 +82,11 @@ class Keranjang extends Component {
     dispatch(logoutUser());
   };
 
+  handleBeli = (idArtikel) => {
+    console.log(
+      `id ${idArtikel} berhasil Dibeli. silahkan melakukan pembayaran`
+    );
+  };
   render() {
     const { isLoggingOut, logoutError } = this.props;
     return (
@@ -119,6 +124,7 @@ class Keranjang extends Component {
                       memory={artikel.ram}
                       idArtikel={artikel.id}
                       hapusArtikel={this.handleHapusArtikel}
+                      beliBarang={this.handleBeli}
                     />
                   );
                 })

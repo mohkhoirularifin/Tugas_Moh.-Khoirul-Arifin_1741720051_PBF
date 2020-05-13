@@ -11,7 +11,7 @@ const Post = (props) => {
           className="img-container p-5"
         >
             <img
-              src="http://placeimg.com/80/80/tech"
+              src="https://kliknklik.com/blogs/wp-content/uploads/2019/08/WhatsApp-Image-2019-08-21-at-05.26.00.jpeg"
               alt="product"
               className="card-img-top"
             />
